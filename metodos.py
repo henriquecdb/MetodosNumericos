@@ -5,30 +5,31 @@ def f(x):
     return (x/2)**2 - sin(x)
 
 
-def falsa_posicao(a, b, erro, itMax):
+def df(x):
+    return x/2 - cos(x)
+
+
+def falsa_posicao(a, b, e, itmax):
     it = 0
     x = a
-    Er = 1
-    while (Er >= erro and it < itMax):
+    er = 1
+    while er >= e and it < itmax:
         xold = x
         x = a - f(a)*(b-a)/(f(b)-f(a))
-        Er = abs((x-xold)/x)
-        if (f(a)*f(x) < 0):
+        er = abs((x-xold)/x)
+        if f(a)*f(x) < 0:
             b = x
         else:
             a = x
         it += 1
-    return (x, Er, it)
+    return x, er, it
 
 
-def ponto_fixo():
-    pass
-
-
-def newton():
-    pass
-
-
-def secantes():
-    pass
+def newton(xo, e, itmax):
+    it = 1
+    while abs(f(xo)) > e and it < itmax:
+        x = xo - f(xo)/df(xo)
+        xo = x
+        it += 1
+    return xo, it, f(xo)
 
