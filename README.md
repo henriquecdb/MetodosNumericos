@@ -19,4 +19,6 @@ def  newton(xo,  tol,  itmax):
 return  xo, f(xo), it
 ```
 
-Com base na fórmula xxxx, calculamos os erros absolutos dos métodos. pode-se observar que o Método de Newton tem $-7,84781071e-8$ , enquanto o Método da Falsa posição $0,0000035970547745$. Sendo assim, nota-se que o primeiro erro é menor e com isso tem possivelmente maior confiabilidade.
+Com base na fórmula de erro absoluto $Ea$ $=|A-a|$, onde $A$ é o valor exato e $a$ é o valor aproximado. Com isso, pode-se observar que o Método de Newton tem $Ea=7,84781071e-8$ , enquanto o Método da Falsa posição tem $Ea=0,0000035970547745$. Sendo assim, nota-se que o primeiro erro é menor e com isso tem possivelmente maior confiabilidade.
+
+Já para os erros relativos, usamos $Er=Ea/A \times 100$. Para o primeiro método, encontramos $0.000121038463075\%$ e $2.64073528674e-06\%$ para o segundo.
