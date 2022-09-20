@@ -25,9 +25,9 @@ def falsa_posicao(a, b, tol, kmax):
     return x, er, k
 
 
-def newton(xo, tol, itmax):
+def newton(xo, tol, kmax):
     it = 0
-    while abs(f(xo)) > tol and it < itmax:
+    while abs(f(xo)) > tol and it < kmax:
         x = xo - f(xo)/df(xo)
         xo = x
         it += 1

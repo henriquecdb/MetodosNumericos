@@ -14,7 +14,7 @@ return  x, er, k
 Já para o Método de Newton os valores $xo$ $=3$, $\epsilon$ $=0.004$ e $7$ respectivamente como valor de aproximação inicial, precisão e iterações máximas. Como resultado, a função retornou $(2.971824269146067, 8.45790763543817e-05, 3)$ para o primeiro método após $3$ iterações, enquanto que no segundo método a função retornou $(2.9718279446789486, 8.239094412942904e-06, 2)$ após $2$ iterações, mostrando assim, uma eficácia maior para o Método de Newton.
 
 ```python:
-def  newton(xo,  tol,  itmax):
+def  newton(xo,  tol,  kmax):
 ...
 return  xo, f(xo), it
 ```
